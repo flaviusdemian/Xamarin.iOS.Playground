@@ -87,6 +87,10 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FirstViewController.cs" />
+    <Compile Include="FirstViewController.designer.cs">
+      <DependentUpon>FirstViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForwardViewController.cs" />
     <Compile Include="ForwardViewController.designer.cs">
       <DependentUpon>ForwardViewController.cs</DependentUpon>
@@ -101,7 +105,9 @@
     <Compile Include="TabeViewController.designer.cs">
       <DependentUpon>TabeViewController.cs</DependentUpon>
     </Compile>
-    <InterfaceDefinition Include="EventsProtocolsDelegates.storyboard" />
+    <InterfaceDefinition Include="EventsProtocolsDelegates.storyboard">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

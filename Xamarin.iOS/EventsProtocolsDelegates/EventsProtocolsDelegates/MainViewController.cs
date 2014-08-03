@@ -57,5 +57,11 @@ namespace EventsProtocolsDelegates
 
         #endregion
 
+
+        partial void btn_GoBack_TouchUpInside(UIButton sender)
+        {
+            Console.WriteLine("Back to Main pressed");
+            DismissViewController(true, null);
+        }
     }
 }

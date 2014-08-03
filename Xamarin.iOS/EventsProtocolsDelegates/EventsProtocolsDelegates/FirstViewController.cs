@@ -1,4 +1,3 @@
-
 using System;
 using System.Drawing;
 
@@ -7,14 +6,14 @@ using MonoTouch.UIKit;
 
 namespace EventsProtocolsDelegates
 {
-    public partial class ForwardViewController : UIViewController
+    public partial class FirstViewController : UIViewController
     {
         static bool UserInterfaceIdiomIsPhone
         {
             get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
         }
 
-        public ForwardViewController(IntPtr handle)
+        public FirstViewController(IntPtr handle)
             : base(handle)
         {
         }
@@ -57,5 +56,6 @@ namespace EventsProtocolsDelegates
         }
 
         #endregion
+
     }
 }

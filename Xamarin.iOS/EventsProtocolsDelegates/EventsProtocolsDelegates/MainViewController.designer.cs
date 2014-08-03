@@ -16,13 +16,25 @@ namespace EventsProtocolsDelegates
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton btn_GoForward { get; set; }
+		UIButton btn_GoBack { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btn_goForward { get; set; }
+
+		[Action ("btn_GoBack_TouchUpInside:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void btn_GoBack_TouchUpInside (UIButton sender);
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (btn_GoForward != null) {
-				btn_GoForward.Dispose ();
-				btn_GoForward = null;
+			if (btn_GoBack != null) {
+				btn_GoBack.Dispose ();
+				btn_GoBack = null;
+			}
+			if (btn_goForward != null) {
+				btn_goForward.Dispose ();
+				btn_goForward = null;
 			}
 		}
 	}
