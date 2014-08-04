@@ -1,13 +1,17 @@
 using System;
+using System.Collections.Generic;
 using System.Drawing;
-
+using EventsProtocolsDelegates.Models;
+using EventsProtocolsDelegates.TableSources;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using System.Threading.Tasks;
 
 namespace EventsProtocolsDelegates
 {
     public partial class TabeViewController : UITableViewController
     {
+        private PersonsTableSource PersonsTableSource = new PersonsTableSource();
         static bool UserInterfaceIdiomIsPhone
         {
             get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
@@ -16,6 +20,55 @@ namespace EventsProtocolsDelegates
         public TabeViewController(IntPtr handle)
             : base(handle)
         {
+            try
+            {
+                PopulateWithPersons();
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+        }
+
+        private async Task PopulateWithPersons()
+        {
+            try
+            {
+                List<Person> persons = new List<Person>();
+                Person p1 = new Person()
+                {
+                    Name = "Flavius Demian",
+                    Country = "Arad, Romania",
+                    IsOnline = true,
+                    Rating = 3.5
+                };
+                persons.Add(p1);
+                Person p2 = new Person()
+                {
+                    Name = "Constantin Georgiu",
+                    Country = "Timisoara, Romania",
+                    IsOnline = false,
+                    Rating = 2.5
+                };
+                persons.Add(p2);
+                Person p3 = new Person()
+                {
+                    Name = "Mariana Demian",
+                    Country = "Resita, Romania",
+                    IsOnline = true,
+                    Rating = 4.5
+                };
+                persons.Add(p3);
+                PersonsTableSource.DataSource = persons;
+
+                await Task.Delay(TimeSpan.FromMilliseconds(1));
+                int x = 0;
+                x++;
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
         }
 
         public override void DidReceiveMemoryWarning()
@@ -56,6 +109,5 @@ namespace EventsProtocolsDelegates
         }
 
         #endregion
-
     }
 }

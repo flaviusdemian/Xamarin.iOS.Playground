@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>EventsProtocolsDelegates</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.your-company.EventsProtocolsDelegates</string>
+	<string>com.slow.EventsProtocolsDelegates</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -21,7 +21,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>3.2</string>
+	<string></string>
 	<key>NSMainNibFile</key>
 	<string></string>
 </dict>

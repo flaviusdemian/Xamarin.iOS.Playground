@@ -1,6 +1,6 @@
 using System;
 using System.Drawing;
-
+using EventsProtocolsDelegates.CustomUIComponent;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
@@ -16,6 +16,31 @@ namespace EventsProtocolsDelegates
         public MainViewController(IntPtr handle)
             : base(handle)
         {
+            try
+            {
+                //SizeF ratingBarSize = new Size(100, 23);
+                //PointF ratingBarLocation = new PointF(20, 50);
+                //UIRatingBar ratingBar = new UIRatingBar(ratingBarSize, ratingBarLocation);
+                //ratingBar.setRatings((int)RBRating.rb2_h);
+
+                //SizeF containerBarSize = new Size(200, 50);
+                //PointF containerBarLocation = new PointF(20, 50);
+
+                //UIView containerView = new UIView(new RectangleF(containerBarLocation, containerBarSize));
+                //containerView.AddSubview(ratingBar);
+
+                //this.View.AddSubview(containerView);
+                //UIButton button = new UIButton();
+                //button.SetTitle("AAA", UIControlState.Normal);
+                //button.BackgroundColor = UIColor.Red;
+                //this.View.AddSubview(button);
+                //this.View.Add(button);
+                //rb_Rating.setRatings(2);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
         }
 
         public override void DidReceiveMemoryWarning()
@@ -62,6 +87,22 @@ namespace EventsProtocolsDelegates
         {
             Console.WriteLine("Back to Main pressed");
             DismissViewController(true, null);
+        }
+
+        partial void btn_CheckRating_TouchUpInside(UIButton sender)
+        {
+            try
+            {
+                SizeF size = new Size(100, 23);
+                PointF location = new PointF(20, 50);
+                rb_Rating = new UIRatingBar(size, location);
+                rb_Rating.setRatings(2);
+                View.AddSubview(rb_Rating);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
         }
     }
 }

@@ -87,6 +87,8 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CustomUIComponent\RBRating.cs" />
+    <Compile Include="CustomUIComponent\UIRatingBar.cs" />
     <Compile Include="FirstViewController.cs" />
     <Compile Include="FirstViewController.designer.cs">
       <DependentUpon>FirstViewController.cs</DependentUpon>
@@ -101,10 +103,13 @@
     <Compile Include="MainViewController.designer.cs">
       <DependentUpon>MainViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Person.cs" />
     <Compile Include="TabeViewController.cs" />
     <Compile Include="TabeViewController.designer.cs">
       <DependentUpon>TabeViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="TableCell\PersonCell.cs" />
+    <Compile Include="TableSources\PersonsTableSource.cs" />
     <InterfaceDefinition Include="EventsProtocolsDelegates.storyboard">
       <SubType>Designer</SubType>
     </InterfaceDefinition>
@@ -115,12 +120,40 @@
     <BundleResource Include="Resources\Default-568h%402x.png" />
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\Images\halfStar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\emptyStar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\fullStar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\emptyStar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fullStar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\halfStar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>

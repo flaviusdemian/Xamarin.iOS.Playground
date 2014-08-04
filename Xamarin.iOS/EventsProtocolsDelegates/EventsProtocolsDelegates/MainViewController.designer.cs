@@ -16,11 +16,23 @@ namespace EventsProtocolsDelegates
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btn_CheckRating { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton btn_GoBack { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton btn_goForward { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		EventsProtocolsDelegates.CustomUIComponent.UIRatingBar rb_Rating { get; set; }
+
+		[Action ("btn_CheckRating_TouchUpInside:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void btn_CheckRating_TouchUpInside (UIButton sender);
 
 		[Action ("btn_GoBack_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -28,6 +40,10 @@ namespace EventsProtocolsDelegates
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (btn_CheckRating != null) {
+				btn_CheckRating.Dispose ();
+				btn_CheckRating = null;
+			}
 			if (btn_GoBack != null) {
 				btn_GoBack.Dispose ();
 				btn_GoBack = null;
@@ -35,6 +51,10 @@ namespace EventsProtocolsDelegates
 			if (btn_goForward != null) {
 				btn_goForward.Dispose ();
 				btn_goForward = null;
+			}
+			if (rb_Rating != null) {
+				rb_Rating.Dispose ();
+				rb_Rating = null;
 			}
 		}
 	}
