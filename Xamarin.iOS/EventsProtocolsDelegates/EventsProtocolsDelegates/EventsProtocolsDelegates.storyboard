@@ -134,6 +134,9 @@
                             <outlet property="delegate" destination="219" id="222"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tbv_Persons" destination="220" id="name-outlet-220"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="225" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

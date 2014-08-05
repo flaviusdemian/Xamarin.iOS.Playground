@@ -14,8 +14,16 @@ namespace EventsProtocolsDelegates
 	[Register ("TabeViewController")]
 	partial class TabeViewController
 	{
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITableView tbv_Persons { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (tbv_Persons != null) {
+				tbv_Persons.Dispose ();
+				tbv_Persons = null;
+			}
 		}
 	}
 }

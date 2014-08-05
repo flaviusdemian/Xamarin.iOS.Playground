@@ -18,24 +18,6 @@ namespace EventsProtocolsDelegates
         {
             try
             {
-                //SizeF ratingBarSize = new Size(100, 23);
-                //PointF ratingBarLocation = new PointF(20, 50);
-                //UIRatingBar ratingBar = new UIRatingBar(ratingBarSize, ratingBarLocation);
-                //ratingBar.setRatings((int)RBRating.rb2_h);
-
-                //SizeF containerBarSize = new Size(200, 50);
-                //PointF containerBarLocation = new PointF(20, 50);
-
-                //UIView containerView = new UIView(new RectangleF(containerBarLocation, containerBarSize));
-                //containerView.AddSubview(ratingBar);
-
-                //this.View.AddSubview(containerView);
-                //UIButton button = new UIButton();
-                //button.SetTitle("AAA", UIControlState.Normal);
-                //button.BackgroundColor = UIColor.Red;
-                //this.View.AddSubview(button);
-                //this.View.Add(button);
-                //rb_Rating.setRatings(2);
             }
             catch (Exception ex)
             {
@@ -56,6 +38,25 @@ namespace EventsProtocolsDelegates
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+            //SizeF ratingBarSize = new Size(100, 23);
+            //PointF ratingBarLocation = new PointF(20, 50);
+            //UIRatingBar ratingBar = new UIRatingBar(ratingBarSize, ratingBarLocation);
+            //ratingBar.setRatings((int)RBRating.rb2_h);
+
+            //SizeF containerBarSize = new Size(200, 50);
+            //PointF containerBarLocation = new PointF(20, 50);
+
+            //UIView containerView = new UIView(new RectangleF(containerBarLocation, containerBarSize));
+            //containerView.AddSubview(ratingBar);
+
+            //this.View.AddSubview(containerView);
+            //UIButton button = new UIButton();
+            //button.SetTitle("AAA", UIControlState.Normal);
+            //button.BackgroundColor = UIColor.Red;
+            //this.View.AddSubview(button);
+            //this.View.Add(button);
+            //rb_Rating.setRatings(2);
 
             // Perform any additional setup after loading the view, typically from a nib.
         }
@@ -93,11 +94,13 @@ namespace EventsProtocolsDelegates
         {
             try
             {
-                SizeF size = new Size(100, 23);
-                PointF location = new PointF(20, 50);
-                rb_Rating = new UIRatingBar(size, location);
-                rb_Rating.setRatings(2);
-                View.AddSubview(rb_Rating);
+                //Add();
+                //SizeF size = new Size(100, 23);
+                //PointF location = new PointF(20, 50);
+                //rb_Rating = new UIRatingBar(size, location);
+                //rb_Rating.setRatings(2);
+                Add(rb_Rating);
+                //View.AddSubview(rb_Rating);
             }
             catch (Exception ex)
             {

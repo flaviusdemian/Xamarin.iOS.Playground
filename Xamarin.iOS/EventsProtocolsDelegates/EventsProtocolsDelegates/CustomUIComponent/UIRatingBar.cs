@@ -71,6 +71,10 @@ namespace EventsProtocolsDelegates.CustomUIComponent
             try
             {
                 image = new UIImageView(rect);
+                if (image == null)
+                {
+                    return image;
+                }
                 image.Image = UIImage.FromFile("Images/emptyStar.png");
                 image.Tag = itag;
             }
@@ -94,9 +98,9 @@ namespace EventsProtocolsDelegates.CustomUIComponent
             try
             {
                 image = (UIImageView)(ViewWithTag(index));
-                if (image != null)
+                if (image == null)
                 {
-                    int x = 0;
+                    throw new Exception("Image is null!");
                 }
             }
             catch (Exception ex)

@@ -22,7 +22,6 @@ namespace EventsProtocolsDelegates
         {
             try
             {
-                PopulateWithPersons();
             }
             catch (Exception ex)
             {
@@ -30,7 +29,8 @@ namespace EventsProtocolsDelegates
             }
         }
 
-        private async Task PopulateWithPersons()
+        //private async Task PopulateWithPersons()
+        private void PopulateWithPersons()
         {
             try
             {
@@ -61,9 +61,12 @@ namespace EventsProtocolsDelegates
                 persons.Add(p3);
                 PersonsTableSource.DataSource = persons;
 
-                await Task.Delay(TimeSpan.FromMilliseconds(1));
-                int x = 0;
-                x++;
+                //await Task.Delay(TimeSpan.FromMilliseconds(1));
+
+                if (tbv_Persons != null)
+                {
+                    tbv_Persons.Source = PersonsTableSource;
+                }
             }
             catch (Exception ex)
             {
@@ -81,11 +84,11 @@ namespace EventsProtocolsDelegates
 
         #region View lifecycle
 
-        public override void ViewDidLoad()
+        public async override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
             // Perform any additional setup after loading the view, typically from a nib.
+            PopulateWithPersons();
         }
 
         public override void ViewWillAppear(bool animated)
