@@ -21,6 +21,11 @@ namespace EventsProtocolsDelegates.CustomUIComponent
         {
         }
 
+        public UIRatingBar(double val)
+        {
+            this.setRatings(val);
+        }
+
         public UIRatingBar(SizeF size, PointF position)
             : base(new RectangleF(position.X, position.Y, size.Width, size.Height))
         {

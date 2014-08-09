@@ -40,7 +40,8 @@ namespace EventsProtocolsDelegates
                     Name = "Flavius Demian",
                     Country = "Arad, Romania",
                     IsOnline = true,
-                    Rating = 3.5
+                    Rating = 3.5,
+                    Image = "Images/me.png"
                 };
                 persons.Add(p1);
                 Person p2 = new Person()
@@ -48,7 +49,8 @@ namespace EventsProtocolsDelegates
                     Name = "Constantin Georgiu",
                     Country = "Timisoara, Romania",
                     IsOnline = false,
-                    Rating = 2.5
+                    Rating = 2.5,
+                    Image = "Images/me.png"
                 };
                 persons.Add(p2);
                 Person p3 = new Person()
@@ -56,7 +58,8 @@ namespace EventsProtocolsDelegates
                     Name = "Mariana Demian",
                     Country = "Resita, Romania",
                     IsOnline = true,
-                    Rating = 4.5
+                    Rating = 4.5,
+                    Image = "Images/me.png"
                 };
                 persons.Add(p3);
                 PersonsTableSource.DataSource = persons;
@@ -84,7 +87,7 @@ namespace EventsProtocolsDelegates
 
         #region View lifecycle
 
-        public async override void ViewDidLoad()
+        public override void ViewDidLoad()
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
